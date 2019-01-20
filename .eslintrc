@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": true
+  },
+  "rules": {
+    "react/jsx-filename-extension" : "off",
+    "jsx-a11y/label-has-for" : "off",
+    "jsx-a11y/label-has-associated-control" : "off"
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "location": true
+  }
+}
