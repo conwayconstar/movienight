@@ -7,6 +7,7 @@ class Discover extends Component {
     super(props);
     this.state = {
       movies: [],
+      search: '',
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -19,6 +20,11 @@ class Discover extends Component {
   handleInputChange(e) {
     const { target } = e;
     const { value } = target;
+    this.setState(
+      {
+        search: value,
+      },
+    );
 
     this.queryMovies(value);
   }
@@ -36,7 +42,7 @@ class Discover extends Component {
   }
 
   render() {
-    const { movies } = this.state;
+    const { movies, search } = this.state;
     return (
       <div className="container mt-5">
 
@@ -51,7 +57,7 @@ class Discover extends Component {
               name="search"
               id="search"
               onChange={this.handleInputChange}
-              value=""
+              value={search}
               placeholder="Search"
             />
           </div>
